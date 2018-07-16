@@ -1,0 +1,9 @@
+name: NameColors
+author: bmlzootown
+version: 1.0.0
+main: ml.bmlzootown.NameColors
+depends: [PermissionsEx]
+commands:
+     namecolor:
+          description: /namecolor [rank]
+          aliases: [namec, ncolor]
