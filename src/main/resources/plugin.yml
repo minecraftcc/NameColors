@@ -3,6 +3,7 @@ author: bmlzootown
 version: 1.0.0
 main: ml.bmlzootown.NameColors
 depends: [PermissionsEx]
+api-version: 1.13
 commands:
      namecolor:
           description: /namecolor [rank]
