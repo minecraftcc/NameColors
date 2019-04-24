@@ -1,10 +1,10 @@
 name: NameColors
 author: bmlzootown
-version: 1.0.0
+version: 2.0.0
 main: ml.bmlzootown.NameColors
-depends: [PermissionsEx]
+depends: [LuckPerms]
 api-version: 1.13
 commands:
      namecolor:
           description: /namecolor [rank]
-          aliases: [namec, ncolor]
+          aliases: [namec, ncolor, nc]
