@@ -48,10 +48,10 @@ public class LuckPermsManager {
         Node node;
         if (prefix == null) {
             String pre = getUserPrefix(player);
-            node = api.getNodeFactory().makePrefixNode(1, pre).build();
+            node = api.getNodeFactory().makePrefixNode(99, pre).build();
             user.unsetPermission(node);
         } else {
-            node = api.getNodeFactory().makePrefixNode(1, prefix).build();
+            node = api.getNodeFactory().makePrefixNode(99, prefix).build();
             user.setPermission(node);
         }
         api.getUserManager().saveUser(user);
