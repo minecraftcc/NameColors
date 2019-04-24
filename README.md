@@ -1,2 +1,2 @@
 # NameColors
-Depends on PermissionsEx (see my fork)
+Depends on LuckPerms
