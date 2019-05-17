@@ -1,6 +1,6 @@
-name: NameColors
+name: ${project.name}
 author: bmlzootown
-version: 2.0.0
+version: ${project.version}
 main: ml.bmlzootown.NameColors
 depends: [LuckPerms]
 api-version: 1.13
