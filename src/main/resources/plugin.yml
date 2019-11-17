@@ -3,7 +3,7 @@ author: bmlzootown
 version: ${project.version}
 main: ml.bmlzootown.NameColors
 depends: [LuckPerms]
-api-version: 1.13
+api-version: 1.14
 commands:
      namecolor:
           description: /namecolor [rank]
