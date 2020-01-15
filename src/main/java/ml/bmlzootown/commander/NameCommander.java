@@ -3,6 +3,7 @@ package ml.bmlzootown.commander;
 import ml.bmlzootown.NameColors;
 import ml.bmlzootown.util.ConfigManager;
 import ml.bmlzootown.util.LuckPermsManager;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -29,17 +30,18 @@ public class NameCommander implements CommandExecutor {
         } else if (sender instanceof Player) {
             Player p = (Player) sender;
             List<String> groups = LuckPermsManager.getPlayerGroups(p);
-            if (args.length == 0 || args.length > 1) {
+            Bukkit.getLogger().info(p.getDisplayName() + ": " + groups.toString());
+            if (args.length != 1) {
                 //Output Help
                 sender.sendMessage(NameColors.prefix + "Commands: ");
-                sender.sendMessage( ChatColor.AQUA + "/namecolor [rank]" + ChatColor.DARK_AQUA + " Changes name color");
-                sender.sendMessage( ChatColor.AQUA + "/namecolor list" + ChatColor.DARK_AQUA + " Lists ranks and their colors");
-                sender.sendMessage( ChatColor.AQUA + "/namecolor reset" + ChatColor.DARK_AQUA + " Resets name color");
+                sender.sendMessage( ChatColor.AQUA + "/namecolors [rank]" + ChatColor.DARK_AQUA + " Changes name color");
+                sender.sendMessage( ChatColor.AQUA + "/namecolors list" + ChatColor.DARK_AQUA + " Lists ranks and their colors");
+                sender.sendMessage( ChatColor.AQUA + "/namecolors reset" + ChatColor.DARK_AQUA + " Resets name color");
             } else {
                 Object[] grps = groups.toArray();
                 if (args[0].equalsIgnoreCase("reset")) {
                     if (groups.isEmpty()) return false;
-                    String group = (String) grps[grps.length - 1];
+                    String group = LuckPermsManager.getPlayerMainGroup(p);
                     String prefix = LuckPermsManager.getGroupPrefix(group);
                     LuckPermsManager.setUserPrefix(p, null);
                     LuckPermsManager.setUserPrefix(p, prefix);
@@ -67,9 +69,6 @@ public class NameCommander implements CommandExecutor {
                         String group = (String)grps[i];
                         if (args[0].equalsIgnoreCase(group)) {
                             String prefix = LuckPermsManager.getGroupPrefix(group);
-                            if (args[0].equalsIgnoreCase("default")) {
-                                prefix = "&f";
-                            }
                             LuckPermsManager.setUserPrefix(p, null);
                             LuckPermsManager.setUserPrefix(p, prefix);
                             if (prefix == null) {

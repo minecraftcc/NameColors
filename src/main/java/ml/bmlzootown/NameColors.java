@@ -1,9 +1,9 @@
 package ml.bmlzootown;
 
-import me.lucko.luckperms.LuckPerms;
-import me.lucko.luckperms.api.LuckPermsApi;
 import ml.bmlzootown.commander.NameCommander;
 import ml.bmlzootown.util.ConfigManager;
+import net.luckperms.api.LuckPerms;
+import net.luckperms.api.LuckPermsProvider;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,8 +16,8 @@ import java.util.logging.Logger;
  */
 public class NameColors extends JavaPlugin {
     public static Plugin pl;
-    public static String prefix =  ChatColor.AQUA  + "[" + ChatColor.DARK_AQUA + "NameColor" + ChatColor.AQUA  + "] ";
-    public static LuckPermsApi api;
+    public static String prefix =  ChatColor.AQUA  + "[" + ChatColor.DARK_AQUA + "NameColors" + ChatColor.AQUA  + "] ";
+    public static LuckPerms api;
 
     public static Logger log;
 
@@ -34,10 +34,10 @@ public class NameColors extends JavaPlugin {
         ConfigManager.initialize();
 
         //Setup LuckPerms
-        api = LuckPerms.getApi();
+        api = LuckPermsProvider.get();
 
         //Register commands/events
-        getCommand("namecolor").setExecutor(new NameCommander());
+        getCommand("namecolors").setExecutor(new NameCommander());
     }
 
     public void onDisable() {

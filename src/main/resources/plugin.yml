@@ -3,8 +3,8 @@ author: bmlzootown
 version: ${project.version}
 main: ml.bmlzootown.NameColors
 depends: [LuckPerms]
-api-version: 1.14
+api-version: 1.15
 commands:
-     namecolor:
-          description: /namecolor [rank]
-          aliases: [namec, ncolor, nc]
+     namecolors:
+          description: /namecolors [rank]
+          aliases: [namec, ncolor, nc, namecs, ncolors, ncs]
