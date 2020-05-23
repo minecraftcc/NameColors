@@ -1,6 +1,6 @@
-package ml.bmlzootown.util;
+package ml.bmlzootown.namecolors.util;
 
-import ml.bmlzootown.NameColors;
+import ml.bmlzootown.namecolors.NameColors;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 

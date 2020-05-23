@@ -1,7 +1,7 @@
 name: ${project.name}
 author: bmlzootown
 version: ${project.version}
-main: ml.bmlzootown.NameColors
+main: ml.bmlzootown.namecolors.NameColors
 depends: [LuckPerms]
 api-version: 1.15
 commands:

@@ -1,8 +1,8 @@
-package ml.bmlzootown.commander;
+package ml.bmlzootown.namecolors.commander;
 
-import ml.bmlzootown.NameColors;
-import ml.bmlzootown.util.ConfigManager;
-import ml.bmlzootown.util.LuckPermsManager;
+import ml.bmlzootown.namecolors.NameColors;
+import ml.bmlzootown.namecolors.util.ConfigManager;
+import ml.bmlzootown.namecolors.util.LuckPermsManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -11,8 +11,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
-import javax.naming.Name;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 

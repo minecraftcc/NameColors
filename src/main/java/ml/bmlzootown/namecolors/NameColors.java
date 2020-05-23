@@ -1,7 +1,7 @@
-package ml.bmlzootown;
+package ml.bmlzootown.namecolors;
 
-import ml.bmlzootown.commander.NameCommander;
-import ml.bmlzootown.util.ConfigManager;
+import ml.bmlzootown.namecolors.commander.NameCommander;
+import ml.bmlzootown.namecolors.util.ConfigManager;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
 import org.bukkit.ChatColor;
